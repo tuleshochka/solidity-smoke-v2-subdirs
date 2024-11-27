@@ -1,0 +1,22 @@
+rules:
+  - id: calls-loop
+    pattern-either:
+      - pattern-inside: |
+          for (...){
+            ...
+          }
+      - pattern-inside: |
+          while (...){
+            ...
+          }
+      - pattern:
+          $DST.$CALL ... (...);
+      - pattern:
+          $DST.$CALL{...}(...);
+    metavariable-regex:
+      $DST: (?P<word1>.*?)
+      $CALL: (?P<word2>transfer|call)
+    language: solidity
+    level: Low
+    description: Calls inside a loop might lead to a denial-of-service attack.
+    recommendation: Favor pull over push strategy for external calls.

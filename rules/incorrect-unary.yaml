@@ -1,0 +1,12 @@
+rules:
+  - id: incorrect-unary
+    pattern-either:
+      - pattern: $VAR...=+...$INT
+      - pattern: $VAR...=+...$VAR
+    metavariable-regex:
+      $VAR: (?P<variable>\w+)
+      $INT: (?P<int>\d+)
+    language: solidity
+    level: Low
+    description: Unary expressions such as x=+1 probably typos.
+    recommendation: Remove the unary expression.

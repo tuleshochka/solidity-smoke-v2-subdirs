@@ -1,0 +1,12 @@
+rules:
+  - id: low-level-calls
+    pattern-either:
+      - pattern: $DST.call{...}(...);
+      - pattern: $DST.$LOWLEVEL(...);
+    metavariable-regex:
+      $LOWLEVEL: (?P<word1>call|delegatecall|staticcall|send)
+      $DST: (?P<word3>\b(?:\w+\s*\([^)]*\)|\w+))
+    language: solidity
+    level: Potential
+    description: The use of low-level calls is error-prone. Low-level calls do not check for code existence or call success.
+    recommendation: Avoid low-level calls. Check the call success. If the call is meant for a contract, check for code existence.

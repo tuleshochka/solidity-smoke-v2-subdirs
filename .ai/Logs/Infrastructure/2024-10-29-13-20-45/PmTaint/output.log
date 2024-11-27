@@ -1,0 +1,70 @@
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+
+AI.Taint.CLangs version:       not found or not supported
+AI.Taint version:              2.2.4.0 (10/17/2024 23:30:42)
+OS:                            Microsoft Windows NT 10.0.22631.0
+Config:                        RELEASE no debugger, no obfuscation
+Peak virtual/working set:      2102024.92578125 / 67.37109375 MB, 64-bit
+
+Scan path or file:             c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules
+Thread count:                  4
+Finish date:                   10/29/2024 13:41:54
+Matches count:                 0 (0 PM + 0 Taint; 0 suppressed)
+Files count:                   71
+Lines/chars count:             1853 / 43574
+Patterns count:                0 (0 PM + 0 Taint)
+File time ratio:               37.04%
+Tokens time ratio:             06.78%
+ParseTree time ratio:          34.00%
+Ust time ratio:                22.18%
+
+Time elapsed:                  03:29.059
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+
+AI.Taint.CLangs version:       not found or not supported
+AI.Taint version:              2.2.4.0 (10/17/2024 23:30:42)
+OS:                            Microsoft Windows NT 10.0.22631.0
+Config:                        RELEASE no debugger, no obfuscation
+Peak virtual/working set:      2102033.796875 / 77.4140625 MB, 64-bit
+
+Scan path or file:             c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules
+Thread count:                  4
+Finish date:                   10/30/2024 11:08:38
+Matches count:                 39 (39 PM + 0 Taint; 0 suppressed)
+Files count:                   71
+Lines/chars count:             1853 / 43574
+Patterns count:                222 (222 PM + 0 Taint)
+File time ratio:               34.56%
+Tokens time ratio:             00.95%
+ParseTree time ratio:          05.21%
+Ust time ratio:                04.95%
+Match time ratio:              38.36%
+Pattern time ratio:            15.97%
+
+Time elapsed:                  02:53.098
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+
+AI.Taint.CLangs version:       not found or not supported
+AI.Taint version:              2.2.4.0 (10/17/2024 23:30:42)
+OS:                            Microsoft Windows NT 10.0.22631.0
+Config:                        RELEASE no debugger, no obfuscation
+Peak virtual/working set:      2102032.421875 / 81.5546875 MB, 64-bit
+
+Scan path or file:             c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2-rules
+Thread count:                  4
+Finish date:                   10/30/2024 11:18:59
+Matches count:                 39 (39 PM + 0 Taint; 0 suppressed)
+Files count:                   71
+Lines/chars count:             1853 / 43574
+Patterns count:                222 (222 PM + 0 Taint)
+File time ratio:               01.00%
+Tokens time ratio:             00.23%
+ParseTree time ratio:          02.28%
+Ust time ratio:                02.32%
+Match time ratio:              82.58%
+Pattern time ratio:            11.59%
+
+Time elapsed:                  01:43.331

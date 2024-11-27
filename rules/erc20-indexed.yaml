@@ -1,0 +1,13 @@
+rules:
+  - id: erc20-indexed
+    patterns:
+      - pattern-not: event Transfer(address indexed from, address indexed to, uint $VAR);
+      - pattern-not: event Approval(address indexed owner, address indexed spender, uint $VAR);
+      - pattern: event $EVENT(...);
+    metavariable-regex:
+      $EVENT: (?P<event>Transfer|Approval)
+      $VAR: (?P<var>\w+)
+    language: solidity
+    level: Potential
+    description: Detects whether events defined by the ERC20 specification that should have some parameters as indexed are missing the indexed keyword.
+    recommendation: Add the indexed keyword to event parameters that should include it, according to the ERC20 specification.

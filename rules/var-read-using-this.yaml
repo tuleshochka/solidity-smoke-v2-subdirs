@@ -1,0 +1,21 @@
+rules:
+    - id: var-read-using-this
+      pattern-either:
+          - pattern-inside: |
+              $TYPE ... $NAME;
+              ...
+          - pattern-inside: |
+              $TYPE ... $NAME = ...;
+              ...
+          - pattern-inside: |
+              mapping(...)...$NAME;
+              ...
+          - pattern: |
+              this.$NAME...;
+      metavariable-regex:
+        $NAME: (?P<name>\w+)
+        $TYPE: (?P<type>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*(?:\s+memory))\b)
+      language: solidity
+      level: Potential
+      description: The contract reads its own variable using this, adding overhead of an unnecessary STATICCALL.
+      recommendation: Read the variable directly from storage instead of calling the contract.

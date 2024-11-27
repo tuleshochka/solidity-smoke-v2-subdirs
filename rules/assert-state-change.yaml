@@ -1,0 +1,21 @@
+rules:
+  - id: assert-state-change
+    patterns:
+        - pattern-inside: |
+            $FUNCTION ...(...)...{
+            ...
+            }
+        - pattern-not: |
+            $FUNCTION ...(...$NAME)...{
+            ...
+            $ASSERT(...$NAME...);
+        - pattern: |
+            $ASSERT(...);
+    metavariable-regex:
+      $FUNCTION: (?P<kt:function>function)
+      $NAME: (?P<name>\w+)
+      $ASSERT: (?P<assert>assert)
+    language: solidity
+    level: Potential
+    description: Incorrect use of assert(). See Solidity best practices.
+    recommendation: Use require for invariants modifying the state.

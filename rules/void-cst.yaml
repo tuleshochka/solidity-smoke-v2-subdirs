@@ -1,0 +1,19 @@
+rules:
+  - id: void-cst
+    patterns:
+      - pattern-inside: |
+          contract $PARENT...{...}
+          ...
+      - pattern: |
+          contract $CHILD is $PARENT...{
+            ...
+            constructor(...) ... $PARENT(){...}
+            ...
+          }
+    metavariable-regex:
+      $PARENT: (?P<word1>\w+)
+      $CHILD: (?P<word2>\w+)
+    language: solidity
+    level: Low
+    description: Detect the call to a constructor that is not implemented
+    recommendation: Remove the constructor call.

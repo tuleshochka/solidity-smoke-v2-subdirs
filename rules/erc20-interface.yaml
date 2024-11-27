@@ -1,0 +1,16 @@
+rules:
+  - id: erc20-interface
+    patterns:
+      - pattern-not: function totalSupply() ... returns (uint256);
+      - pattern-not: function balanceOf(address account) ... returns (uint256);
+      - pattern-not: function transfer(address recipient, uint256 amount) ... returns (bool);
+      - pattern-not: function transferFrom(address sender, address recipient, uint256 amount) ... returns (bool);
+      - pattern-not: function approve(address spender, uint256 amount) ... returns (bool);
+      - pattern-not: function allowance(address owner, address spender) ... returns (uint256);
+      - pattern: function $FUNC(...) ... ;
+    metavariable-regex:
+      $FUNC: (?P<word1>allowance|approve|transferFrom|transfer|balanceOf|totalSupply)
+    language: solidity
+    level: Medium
+    description: Incorrect return values for ERC20 functions. A contract compiled with Solidity > 0.4.22 interacting with these functions will fail to execute them, as the return value is missing.
+    recommendation: Set the appropriate return values and types for the defined ERC20 functions.

@@ -1,0 +1,33 @@
+rules:
+  - id: arbitrary-send-erc20-permit
+    pattern-either:
+      - pattern-inside: |
+          function $NAME(...) ... $TYPE ... {
+            ...
+            $FUNC.permit(... msg.sender ...);
+            ...
+          }
+      - pattern-inside: |
+          function $NAME(...) ... $TYPE ... {
+            ...
+            $FUNC.permit(... address(this) ...);
+            ...
+          }
+      - pattern-inside: |
+          function $NAME(...) ... $TYPE ... {
+            ...
+            $FUNC.permit(...);
+            ...
+          }
+      - pattern: $FUNC.transferFrom(...);
+      - pattern: $FUNC.safeTransferFrom(...);
+      - pattern-not: $FUNC.transferFrom(... msg.sender ...);
+      - pattern-not: $FUNC.safeTransferFrom(... msg.sender ...);
+    metavariable-regex:
+      $FUNC: (?P<word1>\w+)
+      $NAME: (?P<word2>\w+)
+      $TYPE: (?P<word3>external|public)
+    language: solidity
+    level: High
+    description: Detect when msg.sender is not used as from in transferFrom and permit is used.
+    recommendation: Ensure that the underlying ERC20 token correctly implements a permit function.

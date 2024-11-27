@@ -1,0 +1,30 @@
+ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+System.ArgumentException: An item with the same key has already been added. Key: to.call(gas: 25000, value:amount)("")
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.Convert(RootUst rootUst, TypeDeclDfg dfg)
+   at AI.Taint.StandardWorkflow.BuildCpg(RootUst rootUst, TimeSpan& elapsed, UstConstantFolder constantFolder, CancellationToken cancellationToken)
+ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+System.ArgumentException: An item with the same key has already been added. Key: to.call(gas: 25000, value:amount)("")
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.Convert(RootUst rootUst, TypeDeclDfg dfg)
+   at AI.Taint.StandardWorkflow.BuildCpg(RootUst rootUst, TimeSpan& elapsed, UstConstantFolder constantFolder, CancellationToken cancellationToken)
+ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).

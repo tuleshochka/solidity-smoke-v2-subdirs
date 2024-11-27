@@ -1,0 +1,17 @@
+rules:
+  - id: incorrect-shift
+    pattern-either:
+      - pattern-inside: |
+          assembly { ... }
+      - pattern: shr($VAR, $INT)
+      - pattern: shr($VAR, $HEX)
+      - pattern: shl($VAR, $INT)
+      - pattern: shl($VAR, $HEX)
+    metavariable-regex:
+      $VAR: (?P<variable>\w+)
+      $INT: (?P<int>\d+)
+      $HEX: (?P<hex>0x[0-9a-fA-F]{1,})
+    language: solidity
+    level: High
+    description: Detect if the values in a shift operation are reversed
+    recommendation: Swap the order of parameters.

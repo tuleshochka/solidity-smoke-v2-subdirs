@@ -1,0 +1,31 @@
+rules:
+  - id: missing-inheritance
+    patterns:
+      - pattern-inside: |
+          interface $INTER {
+            ...
+            function $FUNC(...)
+            ...
+          }
+          ...
+      - pattern-not: | 
+          contract $CONTR is $INTER {
+            ...
+            function $FUNC(...)
+            ...
+          }
+      - pattern: | 
+          contract $CONTR {
+            ...
+            function $FUNC(...)
+            ...
+          }
+
+    metavariable-regex:
+      $CONTR: (?P<contract>\w+)
+      $INTER: (?P<interface>\w+)
+      $FUNC: (?P<function>\w+)
+    language: solidity
+    level: Potential
+    description: Detect missing inheritance.
+    recommendation: Inherit from the missing interface or contract.

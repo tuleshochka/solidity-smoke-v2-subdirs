@@ -1,0 +1,16 @@
+rules:
+    - id: name-reused
+      patterns:
+          - pattern: |
+              contract $Y {
+                ...
+              }
+              ...
+              contract $Y
+              
+      metavariable-regex:
+        $Y: (?P<noc:word1>\w+)
+      language: solidity
+      level: High
+      description: If a codebase has two contracts the similar names, the compilation artifacts will not contain one of the contracts with the duplicate name.
+      recommendation: Rename the contract.

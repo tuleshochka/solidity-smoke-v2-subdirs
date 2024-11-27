@@ -1,0 +1,28 @@
+2024-10-29 13:40:09.206477 ║INFO	║ 12620	║   0.000 >> Process IPC init started
+2024-10-29 13:40:09.236880 ║INFO	║ 12620	║   0.031 >> Process IPC initialization finished
+2024-10-29 13:40:09.489972 ║DEBUG	║ 12620	║   0.284 >> Preprocessing started
+2024-10-29 13:40:09.496990 ║DEBUG	║ 12620	║   0.286 >> Preprocessing finished
+2024-10-29 13:40:09.684352 ║INFO	║ 12620	║   0.479 >> Scan started
+2024-10-29 13:41:08.771523 ║INFO	║ 12620	║  59.566 >> Scan finished
+2024-10-29 13:41:08.786211 ║DEBUG	║ 12620	║  59.566 >> took too long: 59.08717131614685
+2024-10-29 13:43:14.935380 ║INFO	║ 12620	║ 185.730 >> Finalize
+2024-10-29 13:43:14.941867 ║DEBUG	║ 12620	║ 185.730 >> took too long: 126.16385698318481
+2024-10-29 13:43:14.949227 ║INFO	║ 12620	║ 185.737 >> Finalize done
+2024-10-30 11:07:09.851380 ║INFO	║ 17372	║   0.000 >> Process IPC init started
+2024-10-30 11:07:09.943719 ║INFO	║ 17372	║   0.101 >> Process IPC initialization finished
+2024-10-30 11:07:10.304204 ║DEBUG	║ 17372	║   0.461 >> Preprocessing started
+2024-10-30 11:07:10.311673 ║DEBUG	║ 17372	║   0.462 >> Preprocessing finished
+2024-10-30 11:08:38.735068 ║INFO	║ 17372	║  88.891 >> Finalize
+2024-10-30 11:08:38.749553 ║DEBUG	║ 17372	║  88.892 >> took too long: 88.42885851860046
+2024-10-30 11:08:38.757574 ║INFO	║ 17372	║  88.906 >> Finalize done
+2024-10-30 11:17:32.468411 ║INFO	║ 24272	║   0.000 >> Process IPC init started
+2024-10-30 11:17:32.606482 ║INFO	║ 24272	║   0.138 >> Process IPC initialization finished
+2024-10-30 11:17:32.993883 ║DEBUG	║ 24272	║   0.525 >> Preprocessing started
+2024-10-30 11:17:33.010645 ║DEBUG	║ 24272	║   0.527 >> Preprocessing finished
+2024-10-30 11:18:08.038400 ║INFO	║ 24272	║  35.570 >> Scan started
+2024-10-30 11:18:08.054437 ║DEBUG	║ 24272	║  35.570 >> took too long: 35.04305863380432
+2024-10-30 11:18:43.698110 ║INFO	║ 24272	║  71.230 >> Scan finished
+2024-10-30 11:18:43.718796 ║DEBUG	║ 24272	║  71.230 >> took too long: 35.65970969200134
+2024-10-30 11:26:40.422285 ║INFO	║ 24272	║ 547.954 >> Finalize
+2024-10-30 11:26:40.436760 ║DEBUG	║ 24272	║ 547.955 >> took too long: 476.7241749763489
+2024-10-30 11:26:40.445890 ║INFO	║ 24272	║ 547.969 >> Finalize done

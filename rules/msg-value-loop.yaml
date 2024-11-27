@@ -1,0 +1,22 @@
+rules:
+  - id: msg-value-loop
+    pattern-either:
+      - pattern-inside: |
+            for (...) {
+              ...
+            }
+      - pattern-inside: |
+            while (...) {
+              ...
+            }
+      - pattern: $MSG
+      - pattern-not: require(... $MSG ...);
+      - pattern-not: require(... $MSG ...);
+      - pattern-not: if (... $MSG ...)
+      - pattern-not: assert(... $MSG ...);
+    metavariable-regex:
+      $MSG: (?P<word1>msg.value)
+    language: solidity
+    level: High
+    description: Detect the use of msg.value inside a loop.
+    recommendation: Provide an explicit array of amounts alongside the receivers array, and check that the sum of all amounts matches msg.value.

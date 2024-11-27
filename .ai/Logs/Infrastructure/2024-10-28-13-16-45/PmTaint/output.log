@@ -1,0 +1,98 @@
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+ERROR System.ArgumentException: An item with the same key has already been added. Key: to.call(gas: 25000, value:amount)("")
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.Convert(RootUst rootUst, TypeDeclDfg dfg)
+   at AI.Taint.StandardWorkflow.BuildCpg(RootUst rootUst, TimeSpan& elapsed, UstConstantFolder constantFolder, CancellationToken cancellationToken)
+
+AI.Taint.CLangs version:       not found or not supported
+AI.Taint version:              2.2.4.0 (10/17/2024 23:30:42)
+OS:                            Microsoft Windows NT 10.0.22631.0
+Config:                        RELEASE no debugger, no obfuscation
+Peak virtual/working set:      2102052.0703125 / 111.78125 MB, 64-bit
+
+Scan path or file:             c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2
+Thread count:                  4
+Finish date:                   10/28/2024 13:19:44
+Matches count:                 122 (39 PM + 83 Taint; 0 suppressed)
+Files count:                   71
+Lines/chars count:             1853 / 43574
+Patterns count:                898 (222 PM + 676 Taint)
+File time ratio:               00.25%
+Tokens time ratio:             00.10%
+ParseTree time ratio:          00.99%
+Ust time ratio:                00.59%
+Cpg time ratio:                00.07%
+Match time ratio:              93.64%
+Pattern time ratio:            04.37%
+
+Time elapsed:                  01:38.515
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+ERROR System.ArgumentException: An item with the same key has already been added. Key: to.call(gas: 25000, value:amount)("")
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.ProcessUst(Ust ust)
+   at AI.Taint.Graphs.CpgConverter.Convert(RootUst rootUst, TypeDeclDfg dfg)
+   at AI.Taint.StandardWorkflow.BuildCpg(RootUst rootUst, TimeSpan& elapsed, UstConstantFolder constantFolder, CancellationToken cancellationToken)
+
+AI.Taint.CLangs version:       not found or not supported
+AI.Taint version:              2.2.4.0 (10/17/2024 23:30:42)
+OS:                            Microsoft Windows NT 10.0.22631.0
+Config:                        RELEASE no debugger, no obfuscation
+Peak virtual/working set:      2102058.59375 / 112.1640625 MB, 64-bit
+
+Scan path or file:             c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2
+Thread count:                  4
+Finish date:                   10/28/2024 13:47:13
+Matches count:                 122 (39 PM + 83 Taint; 0 suppressed)
+Files count:                   71
+Lines/chars count:             1853 / 43574
+Patterns count:                898 (222 PM + 676 Taint)
+File time ratio:               00.29%
+Tokens time ratio:             00.09%
+ParseTree time ratio:          01.10%
+Ust time ratio:                00.62%
+Cpg time ratio:                00.08%
+Match time ratio:              93.08%
+Pattern time ratio:            04.75%
+
+Time elapsed:                  01:41.148
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-equality.sol": extraneous input 'EOF' expecting {'address', 'bool', 'bytes', 'constructor', 'enum', 'error', 'event', 'fallback', Fixed, FixedBytes, 'from', 'function', 'global', 'mapping', 'modifier', 'receive', 'revert', SignedIntegerType, 'string', 'struct', 'transient', 'type', Ufixed, UnsignedIntegerType, 'using', '}', Identifier} at [7,7).
+ERROR ParsingException in "c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2\incorrect-unary.sol": extraneous input '+' expecting {'address', 'bool', 'bytes', 'delete', 'error', 'false', Fixed, FixedBytes, 'from', 'global', 'new', 'payable', 'revert', SignedIntegerType, 'string', 'transient', 'true', 'type', Ufixed, UnsignedIntegerType, '(', '[', '-', '!', '~', '++', '--', NonEmptyStringLiteral, EmptyStringLiteral, UnicodeStringLiteral, HexString, HexNumber, DecimalNumber, Identifier} at [9,18..19).
+
+AI.Taint.CLangs version:       not found or not supported
+AI.Taint version:              2.2.4.0 (10/17/2024 23:30:42)
+OS:                            Microsoft Windows NT 10.0.22631.0
+Config:                        RELEASE no debugger, no obfuscation
+Peak virtual/working set:      2102033.484375 / 79.94921875 MB, 64-bit
+
+Scan path or file:             c:\Positive Technologies\AI\apps\Solidity\solidity-smoke-v2
+Thread count:                  4
+Finish date:                   10/28/2024 13:59:46
+Matches count:                 39 (39 PM + 0 Taint; 0 suppressed)
+Files count:                   71
+Lines/chars count:             1853 / 43574
+Patterns count:                222 (222 PM + 0 Taint)
+File time ratio:               01.23%
+Tokens time ratio:             00.63%
+ParseTree time ratio:          05.00%
+Ust time ratio:                05.23%
+Match time ratio:              68.45%
+Pattern time ratio:            19.46%
+
+Time elapsed:                  02:59.480

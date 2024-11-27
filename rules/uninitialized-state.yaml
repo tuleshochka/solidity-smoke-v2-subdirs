@@ -1,0 +1,17 @@
+rules:
+    - id: uninitialized-state
+      pattern-either:
+        - pattern-not-inside: |
+            function $F(...) {
+              ...
+            }
+        - pattern: $TYPE $STATE $VAR;
+      metavariable-regex:
+        $TYPE: (?P<noc:word2>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*)\b)
+        $VAR: (?P<noc:word3>\w+)
+        $STATE: (?P<noc:word1>\w+)
+        $F: (?P<noc:word4>\w+)
+      language: solidity
+      level: High
+      description: Uninitialized state variables.
+      recommendation: Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.

@@ -1,0 +1,54 @@
+rules:
+  - id: encode-packed-collision
+    pattern-either:
+      - pattern-inside: |
+          function $F(bytes ... $A, string  ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(address[] ... $A, address[] ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(uint256[] ... $A, uint256[] ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(bytes ... $A, bytes ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(string ... $A, string ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(bytes ... $A, string ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(string ... $A, bytes ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(address[] ... $A, address[] ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(uint256[] ... $A, uint256[] ... $B) ... {
+            ...
+          }
+      - pattern-inside: |
+          function $F(string ... $A, uint[] ... $B) ... {
+            ...
+          }
+      - pattern: abi.encodePacked(... $A ... $B ...)
+    metavariable-regex:
+      $F: (?P<word1>\w+)
+      $A: (?P<word2>\w+)
+      $B: (?P<word3>\w+)
+      $X: (?P<word4>\w+)
+      $TYPE: (?P<word5>\w+|(\w+(?:\s+\w+)))
+    language: solidity
+    level: High
+    description: Detect collision due to dynamic type usages in abi.encodePacked
+    recommendation: Do not use more than one dynamic type in abi.encodePacked(). Use abi.encode(), preferably.

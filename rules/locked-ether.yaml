@@ -1,0 +1,44 @@
+rules:
+  - id: locked-ether
+    patterns:
+      - pattern-inside: |
+          function ...{
+          ...
+          }
+      - pattern: |
+          function $FUNC(...) ... $MODIFICATOR ... {
+            ...
+          }
+      - pattern-not: |
+          function $FUNC(...) ... $MODIFICATOR ... {
+            ...
+            $DST.$PAY(...);
+            ...
+          }
+      - pattern-not: |
+          function $FUNC(...) ... $MODIFICATOR ... {
+            ...
+            $DST.call{...}(...);
+            ...
+          }
+      - pattern-not: |
+          function $FUNC(...) ... $MODIFICATOR ... {
+            ...
+            msg.value
+            ...
+          }
+      - pattern-not: |
+          function $FUNC(...) ... {
+            ...
+            payable...call{...}(...);
+            ...
+          }
+    metavariable-regex:
+      $FUNC: (?P<word1>\w+)
+      $PAY: (?P<word2>call|send|transfer|delegatecall|callcode)
+      $DST: (?P<word3>\b(?:\w+\s*\([^)]*\)|\w+))
+      $MODIFICATOR: (?P<noc:word4>payable)
+    language: solidity
+    level: Medium
+    description: Contract with a payable function, but without a withdrawal capacity.
+    recommendation: Remove the payable attribute or add a withdraw function.

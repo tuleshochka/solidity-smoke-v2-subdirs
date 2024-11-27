@@ -1,0 +1,26 @@
+rules:
+    - id: unchecked-transfer
+      patterns:
+          - pattern-inside: |
+              function ...(...)...{
+              ...
+              }
+          - pattern-not: |
+              $VAR = $TOKEN.$TF(...);
+              ...
+              if (...$VAR...)
+          - pattern-not: |
+              $VAR=$TOKEN.$TF(...);
+              ...
+              $REQUIRE($VAR...);
+          - pattern: |
+              $TOKEN.$TF(...);
+      metavariable-regex:
+        $VAR: (?P<var>\w+)
+        $TOKEN: (?P<token>\w+)
+        $TF: (?P<tf>transferFrom|transfer)
+        $REQUIRE: (?P<req>require)
+      language: solidity
+      level: High
+      description: The return value of an external transfer/transferFrom call is not checked.
+      recommendation: Use SafeERC20, or ensure that the transfer/transferFrom return value is checked.

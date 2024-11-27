@@ -1,0 +1,22 @@
+rules:
+  - id: timestamp
+    pattern-either:
+      - pattern-inside: |
+          function ... {
+            ...
+          }
+      - pattern-inside: |
+          modifier ... {
+            ...
+          }
+      - pattern-inside: |
+          constructor ... {
+            ...
+          }
+      - pattern: $TIME
+    metavariable-regex:
+      $TIME: (?P<time>block.timestamp|now)
+    language: solidity
+    level: Low
+    description: Dangerous usage of block.timestamp. block.timestamp can be manipulated by miners.
+    recommendation: Avoid relying on block.timestamp.

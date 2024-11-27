@@ -1,0 +1,14 @@
+[10/28/2024, 1:15:36 PM] info: Logging was started to file.
+[10/28/2024, 1:15:36 PM] info: Start application inspector initialization
+[10/28/2024, 1:15:36 PM] info: Hide developer mode UI
+[10/28/2024, 1:15:36 PM] info: Infrastructure Configurations: {"port":8000,"infrastructureAssemblyFolderPath":"C:\\Users\\sizyn\\AppData\\Local\\Application Inspector Analyzer","applicationResourcesFolderPath":"C:\\Users\\sizyn\\AppData\\Local\\Application Inspector Analyzer","scanTargetFolderPath":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2","isDebugging":false,"logLevel":{"q8_1":"Error","r8_1":5,"type":5,"key":"Settings.LogLevel.Error.Text"},"logDir":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2\\.ai\\Logs\\Infrastructure\\2024-10-28-13-15-36","tipsFoundNotificationThreshold":1000,"similarIssuesFoundNotificationThreshold":1000,"applicationLocalDataFolderPath":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2\\.ai"}
+[10/28/2024, 1:15:36 PM] info: Start infrastructure initialization
+[10/28/2024, 1:15:36 PM] info: Infrastructure was started
+[10/28/2024, 1:15:38 PM] info: Initialize aie integration isn't initialized
+[10/28/2024, 1:15:38 PM] info: Infrastructure was initialized
+[10/28/2024, 1:15:38 PM] info: Infrastructure Installer was deleted
+[10/28/2024, 1:15:38 PM] info: Clean up logs files was started
+[10/28/2024, 1:15:38 PM] info: Clean up logs files was finished
+[10/28/2024, 1:15:39 PM] info: Project was created. Id: d02dafac-237a-4a7e-a15f-ac2f7dbe271c
+[10/28/2024, 1:16:33 PM] info: Hide developer mode UI
+[10/28/2024, 1:16:33 PM] info: Application inspector was stopped

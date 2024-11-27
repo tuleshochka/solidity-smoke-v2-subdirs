@@ -1,0 +1,34 @@
+rules:
+  - id: shadowing-abstract
+    pattern-either:
+      - pattern-inside: |
+          contract $X...{
+            ...
+            $TYPE ... $VAR;
+            ...
+          }
+          ...
+      - pattern-inside: |
+          contract $X...{
+            ...
+            $TYPE ... $VAR = ...;
+            ...
+          }
+          ...
+      - pattern: |
+          contract $Y is $X...{
+            ...
+            $TYPE ... $VAR;
+      - pattern: |
+          contract $Y is $X...{
+            ...
+            $TYPE ... $VAR = ...;     
+    metavariable-regex:
+      $TYPE: (?P<word1>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*(?:\s+memory))\b)
+      $VAR: (?P<word2>\w+)
+      $X: (?P<word3>\w+)
+      $Y: (?P<word4>\w+)
+    language: solidity
+    level: Medium
+    description: Detection of state variables shadowed from abstract contracts.
+    recommendation: Remove the state variable shadowing.

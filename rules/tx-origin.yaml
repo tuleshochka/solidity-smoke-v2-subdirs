@@ -1,0 +1,25 @@
+rules:
+    - id: tx-origin
+      pattern-either:
+          - pattern-inside: |
+              function ...(...)...{
+              ...
+              }
+          - pattern-not: |
+              require(tx.origin $OP msg.sender...);
+          - pattern: |
+              if (tx.origin $OP msg.sender...)
+          - pattern-not: |
+              assert(tx.origin $OP msg.sender...)
+          - pattern: |
+              require(tx.origin $OP...);
+          - pattern: |
+              if (tx.origin $OP...)
+          - pattern: |
+              assert(tx.origin $OP...)
+      metavariable-regex:
+        $OP: (?P<op>==|!=)
+      language: solidity
+      level: Medium
+      description: tx.origin-based protection can be abused by a malicious contract if a legitimate user interacts with the malicious contract.
+      recommendation: Do not use tx.origin for authorization.

@@ -1,0 +1,11 @@
+rules:
+  - id: tautological-compare
+    patterns:
+      - pattern: $VAR $BOOL $VAR
+    metavariable-regex:
+      $VAR: (?P<word2>\w+)
+      $BOOL: (?P<word3><|>|>=|<=|!=|==)
+    language: solidity
+    level: Medium
+    description: A variable compared to itself is probably an error as it will always return true for ==, >=, <= and always false for <, > and !=.
+    recommendation: Remove comparison or compare to different value.

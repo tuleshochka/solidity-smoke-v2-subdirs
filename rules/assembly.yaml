@@ -1,0 +1,18 @@
+rules:
+  - id: assembly
+    patterns:
+        - pattern-inside: |
+            function ...(...)...{
+            ...
+            }
+        - pattern: |
+            $ASSEMBLY {
+            ...
+            }
+    metavariable-regex:
+      $NAME: (?P<name>\w+)
+      $ASSEMBLY: (?P<assembly>assembly)
+    language: solidity
+    level: Potential
+    description: The use of assembly is error-prone and should be avoided.
+    recommendation: Do not use evm assembly.

@@ -1,0 +1,42 @@
+rules:
+  - id: unchecked-lowlevel
+    pattern-either:
+      - pattern-inside: |
+          function ...(...)...{
+          ...
+          }      
+      - pattern-not: |
+            bool $COND = ...;
+            ...
+            require($COND, "...");
+      - pattern-not: |
+            (bool $COND, ...) = ...;
+            ...
+            require($COND, "...");
+      - pattern-not: |
+            bool $COND = ...;
+            ...
+            require($COND);
+      - pattern-not: |
+            (bool $COND, ...) = ...;
+            ...
+            require($COND);
+      - pattern-not: |
+            (bool $COND, ...) = ...;
+            ...
+            if (... $COND ...)
+      - pattern-not: |
+            bool $COND = ...;
+            ...
+            if (... $COND ...)
+      - pattern: $DST.$LOWLEVEL(...);
+      - pattern: $DST.call{...}(...);
+    metavariable-regex:
+      $LOWLEVEL: (?P<word1>call|delegatecall|staticcall|send)
+      $COND: (?P<word2>\w+)
+      $DST: (?P<word3>\b(?:\w+\s*\([^)]*\)|\w+))
+      $FUNC: (?P<function>\w+)
+    language: solidity
+    level: Medium
+    description: The return value of a low-level call is not checked.
+    recommendation: Ensure that the return value of a low-level call is checked or logged.

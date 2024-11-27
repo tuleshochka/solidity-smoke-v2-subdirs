@@ -1,0 +1,23 @@
+rules:
+    - id: multiple-constructors
+      patterns:
+          - pattern: |
+              contract $Y {
+                ...
+                constructor() $X {
+                  ...
+                }
+                ...
+                function $Y() public {
+                  ...
+                }
+                ...
+              }
+
+      metavariable-regex:
+        $X: (?P<word1>public)
+        $Y: (?P<word2>\w+)
+      language: solidity
+      level: High
+      description: Detect multiple constructor definitions in the same contract (using new and old schemes).
+      recommendation: Only declare one constructor, preferably using the new scheme constructor(...) instead of function <contractName>(...).

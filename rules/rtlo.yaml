@@ -1,0 +1,10 @@
+rules:
+    - id: rtlo
+      pattern-either:
+        - pattern: $UNI
+      metavariable-regex:
+        $UNI: (?P<word2>\u0432\u0402\u00ae|\u0432\u0402\u00ad|\u0432\u0402\u00ac)
+      language: solidity
+      level: High
+      description: An attacker can manipulate the logic of the contract by using a right-to-left-override character (U+202E).
+      recommendation: Special control characters must not be allowed.

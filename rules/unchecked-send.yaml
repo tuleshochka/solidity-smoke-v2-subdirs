@@ -1,0 +1,28 @@
+rules:
+    - id: unchecked-send
+      patterns:
+          - pattern-inside: |
+              function ...(...)...{
+              ...
+              }
+          - pattern-not: |
+              $NAME = $TOKEN.$SEND(...);
+              ...
+              $REQUIRE($NAME...);
+          - pattern-not: |
+              $NAME = $TOKEN.$SEND(...);
+              ...
+              if (...$NAME...){
+              ...
+              }
+          - pattern: |
+              $TOKEN.$SEND(...);
+      metavariable-regex:
+        $NAME: (?P<name>\w+)
+        $TOKEN: (?P<token>\w+)
+        $SEND: (?P<send>send)
+        $REQUIRE: (?P<req>require)
+      language: solidity
+      level: Medium
+      description: The return value of a send is not checked.
+      recommendation: Ensure that the return value of send is checked or logged.

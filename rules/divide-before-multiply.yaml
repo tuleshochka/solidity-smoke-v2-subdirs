@@ -1,0 +1,18 @@
+rules:
+  - id: divide-before-multiply
+    pattern-either:
+      - pattern: |
+          ($VAR1 / $VAR2) * $VAR3
+      - pattern: |
+          ($NUM1 / $NUM2) * $NUM3
+    metavariable-regex:
+      $VAR1: (?P<variable1>\w+)
+      $VAR2: (?P<variable2>\w+)
+      $VAR3: (?P<variable3>\w+)
+      $NUM1: (?P<number1>\d+)
+      $NUM2: (?P<number2>\d+)
+      $NUM3: (?P<number3>\d+)
+    language: solidity
+    level: Medium
+    description: Solidity's integer division truncates. Thus, performing division before multiplication can lead to precision loss.
+    recommendation: Consider ordering multiplication before division.

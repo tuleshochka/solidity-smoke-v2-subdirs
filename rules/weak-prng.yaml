@@ -1,0 +1,16 @@
+rules:
+  - id: weak-prng
+    pattern-either:
+      - pattern-inside: uint256(...)
+      - pattern-inside: keccak256(...)
+      - pattern-inside: |
+          $TYPE ... $VAR = ...;
+      - pattern: $WEAK
+    metavariable-regex:
+      $WEAK: (?P<weak>block\.timestamp|block\.difficulty|block\.number|block\.coinbase|blockhash(.*.))
+      $TYPE: (?P<type>\b(?:uint\d*|int\d*)\b)
+      $VAR: (?P<var>\w+)
+    language: solidity
+    level: High
+    description: Weak PRNG due to a modulo on block.timestamp, now or blockhash. These can be influenced by miners to some extent so they should be avoided.
+    recommendation: Do not use block.timestamp, now or blockhash as a source of randomness

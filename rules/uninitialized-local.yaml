@@ -1,0 +1,18 @@
+rules:
+    - id: uninitialized-local
+      patterns:
+        - pattern-inside: |
+            function $F(...) ... {
+              ...
+            }
+        - pattern-not-inside: for(...)
+        - pattern-not: $TYPE ... $VAR = ...;
+        - pattern: $TYPE ... $VAR;
+      metavariable-regex:
+        $TYPE: (?P<word2>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*(?:\s+memory))\b)
+        $VAR: (?P<word3>\w+)
+        $F: (?P<word4>\w+)
+      language: solidity
+      level: Medium
+      description: Uninitialized local variables.
+      recommendation: Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.

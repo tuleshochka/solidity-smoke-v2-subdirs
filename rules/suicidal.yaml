@@ -1,0 +1,31 @@
+rules:
+  - id: suicidal
+    pattern-either:
+      - pattern-inside: |
+          function $X(...) ... {
+          ...
+          }
+      - pattern: |          
+          $FUNC(msg.sender)
+      - pattern: |
+          function $X(...address payable $VAR...) ... $INTERNAL ... {
+          ...
+          $FUNC(...$VAR...);
+      - pattern: |          
+          address payable $VAR = ...;
+          ...
+          $FUNC(...$VAR...);
+      - pattern-not-inside: |
+          function $X(...) ... onlyOwner ... {
+          ...            
+          }
+    metavariable-regex:
+      $X: (?P<word1>\w+)
+      $FUNC: (?P<word2>selfdestruct|suicide)
+      $PROP: (?P<word3>public|external)
+      $VAR: (?P<variable>[_A-Za-z]\w*)
+      $INTERNAL: (?P<internal>internal)
+    language: solidity
+    level: High
+    description: Unprotected call to a function executing selfdestruct/suicide.
+    recommendation: Protect access to all sensitive functions.

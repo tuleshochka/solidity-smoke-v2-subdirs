@@ -1,0 +1,18 @@
+2024-10-28 13:18:00.374340 ║INFO	║ 13812	║   0.000 >> Process IPC init started
+2024-10-28 13:18:00.380354 ║INFO	║ 13812	║   0.007 >> Process IPC initialization finished
+2024-10-28 13:18:54.985727 ║INFO	║ 13812	║  54.611 >> Scan started
+2024-10-28 13:19:24.851988 ║INFO	║ 13812	║  84.478 >> Scan finished
+2024-10-28 13:46:20.084627 ║INFO	║ 25208	║   0.000 >> Process IPC init started
+2024-10-28 13:46:20.092297 ║INFO	║ 25208	║   0.008 >> Process IPC initialization finished
+2024-10-28 13:46:22.878156 ║INFO	║ 25208	║   2.795 >> Scan started
+2024-10-28 13:46:53.527037 ║INFO	║ 25208	║  33.442 >> Scan finished
+2024-10-28 13:58:14.315161 ║INFO	║ 25644	║   0.000 >> Process IPC init started
+2024-10-28 13:58:14.353574 ║INFO	║ 25644	║   0.040 >> Process IPC initialization finished
+2024-10-28 13:58:14.490698 ║DEBUG	║ 25644	║   0.175 >> Preprocessing started
+2024-10-28 13:58:14.512314 ║DEBUG	║ 25644	║   0.177 >> Preprocessing finished
+2024-10-28 13:58:17.036321 ║INFO	║ 25644	║   2.722 >> Scan started
+2024-10-28 13:58:17.042389 ║DEBUG	║ 25644	║   2.722 >> took too long: 2.5456225872039795
+2024-10-28 13:59:18.112207 ║INFO	║ 25644	║  63.797 >> Scan finished
+2024-10-28 13:59:18.123980 ║DEBUG	║ 25644	║  63.798 >> took too long: 61.07488393783569
+2024-10-28 13:59:56.783852 ║INFO	║ 25644	║ 102.470 >> Finalize
+2024-10-28 13:59:56.793403 ║DEBUG	║ 25644	║ 102.470 >> took too long: 38.671645641326904

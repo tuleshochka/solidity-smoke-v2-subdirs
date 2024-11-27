@@ -1,0 +1,79 @@
+[10/29/2024, 1:20:45 PM] info: Logging was started to file.
+[10/29/2024, 1:20:45 PM] info: Start application inspector initialization
+[10/29/2024, 1:20:45 PM] info: Hide developer mode UI
+[10/29/2024, 1:20:45 PM] info: Infrastructure Configurations: {"port":8000,"infrastructureAssemblyFolderPath":"C:\\Users\\sizyn\\AppData\\Local\\Application Inspector Analyzer","applicationResourcesFolderPath":"C:\\Users\\sizyn\\AppData\\Local\\Application Inspector Analyzer","scanTargetFolderPath":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2-rules","isDebugging":false,"logLevel":{"q8_1":"Error","r8_1":5,"type":5,"key":"Settings.LogLevel.Error.Text"},"logDir":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2-rules\\.ai\\Logs\\Infrastructure\\2024-10-29-13-20-45","tipsFoundNotificationThreshold":1000,"similarIssuesFoundNotificationThreshold":1000,"applicationLocalDataFolderPath":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2-rules\\.ai"}
+[10/29/2024, 1:20:45 PM] info: Start infrastructure initialization
+[10/29/2024, 1:20:46 PM] info: Infrastructure was started
+[10/29/2024, 1:20:47 PM] info: Initialize aie integration isn't initialized
+[10/29/2024, 1:20:47 PM] info: Infrastructure was initialized
+[10/29/2024, 1:20:47 PM] info: Infrastructure Installer was deleted
+[10/29/2024, 1:20:47 PM] info: Clean up logs files was started
+[10/29/2024, 1:20:47 PM] info: Clean up logs files was finished
+[10/29/2024, 1:20:48 PM] info: Start rendering scan result. ScanResultId=03d164e2-5871-4e3f-9c7c-ce074568b7fd, ProjectId=d02dafac-237a-4a7e-a15f-ac2f7dbe271c
+[10/29/2024, 1:20:49 PM] info: Rendering scan result was finished
+[10/29/2024, 1:39:30 PM] info: Start updating filter
+[10/29/2024, 1:39:30 PM] info: The filter has been updated
+[10/29/2024, 1:39:30 PM] info: Start applying filter
+[10/29/2024, 1:39:30 PM] info: The filter has been applied
+[10/29/2024, 1:39:31 PM] info: Start updating filter
+[10/29/2024, 1:39:31 PM] info: The filter has been updated
+[10/29/2024, 1:39:31 PM] info: Start applying filter
+[10/29/2024, 1:39:31 PM] info: The filter has been applied
+[10/29/2024, 1:39:34 PM] info: Start updating filter
+[10/29/2024, 1:39:34 PM] info: The filter has been updated
+[10/29/2024, 1:39:34 PM] info: Start applying filter
+[10/29/2024, 1:39:34 PM] info: The filter has been applied
+[10/29/2024, 1:40:04 PM] info: Start scan command handled
+[10/29/2024, 1:43:19 PM] info: Scan done message handled
+[10/29/2024, 1:44:43 PM] info: Start comparing handling
+[10/29/2024, 11:19:50 PM] info: Show description command handled
+[10/29/2024, 11:21:07 PM] info: Show description command handled
+[10/29/2024, 11:21:18 PM] info: Show description command handled
+[10/29/2024, 11:23:40 PM] info: Show description command handled
+[10/29/2024, 11:38:03 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:38:09 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:38:19 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:38:24 PM] info: Suppress Vulnerability command handled
+[10/29/2024, 11:39:56 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:40:02 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:40:06 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:40:12 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:40:23 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:40:32 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:57:49 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:57:51 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:57:54 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:57:56 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:11 PM] info: Start updating filter
+[10/29/2024, 11:58:11 PM] info: The filter has been updated
+[10/29/2024, 11:58:11 PM] info: Start applying filter
+[10/29/2024, 11:58:12 PM] info: The filter has been applied
+[10/29/2024, 11:58:15 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:17 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:20 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:23 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:25 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:27 PM] info: Change vulnerability state command handled
+[10/29/2024, 11:58:29 PM] info: Suppress Vulnerability command handled
+[10/29/2024, 11:58:32 PM] info: Change vulnerability state command handled
+[10/30/2024, 12:00:38 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:00:42 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:00:49 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:00:53 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:00:57 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:19:52 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:19:57 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:01 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:06 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:12 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:38 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:41 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:56 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:20:59 AM] info: Change vulnerability state command handled
+[10/30/2024, 12:21:03 AM] info: Change vulnerability state command handled
+[10/30/2024, 11:07:04 AM] info: Start scan command handled
+[10/30/2024, 11:08:41 AM] info: Scan done message handled
+[10/30/2024, 11:13:25 AM] info: Start comparing handling
+[10/30/2024, 11:13:25 AM] info: Comparing finished
+[10/30/2024, 11:17:26 AM] info: Start scan command handled
+[10/30/2024, 11:26:43 AM] info: Scan done message handled

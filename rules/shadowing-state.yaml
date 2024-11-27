@@ -1,0 +1,38 @@
+rules:
+  - id: shadowing-state
+    pattern-either:
+      - pattern-inside: |
+          contract $X {
+            ...
+            $TYPE $VAR;
+            ...
+          }
+          ...
+      - pattern-inside: |
+          contract $X {
+            ...
+            $TYPE $VAR = ...;
+            ...
+          }
+          ...
+      - pattern: |
+          contract $Y is $X {
+            ...
+            $TYPE $VAR;
+            ...
+          }
+      - pattern: |
+          contract $Y is $X {
+            ...
+            $TYPE $VAR = ...;
+            ...
+          }        
+    metavariable-regex:
+      $TYPE: (?P<word1>\w+)
+      $VAR: (?P<word2>\w+)
+      $X: (?P<word3>\w+)
+      $Y: (?P<word4>\w+)
+    language: solidity
+    level: High
+    description: Detection of state variables shadowed.
+    recommendation: Remove the state variable shadowing.

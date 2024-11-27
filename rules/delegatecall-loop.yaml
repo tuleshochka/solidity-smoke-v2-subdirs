@@ -1,0 +1,31 @@
+rules:
+  - id: delegatecall-loop
+    pattern-either:
+      - pattern: |
+          function $ANY(...) ... payable ... {
+            ...
+            for (...) {
+              ...
+              $CALL(...)
+              ...
+            }
+            ...
+          }
+      - pattern: |
+          function $ANY(...) ... payable ... {
+            ...
+            while (...) {
+              ...
+              $CALL(...)
+              ...
+            }
+            ...
+          }
+    metavariable-regex:
+      $DST: (?P<word1>.*?)
+      $ANY: (?P<word2>\w+)
+      $CALL: (?P<word3>delegatecall)
+    language: solidity
+    level: High
+    description: Detect the use of delegatecall inside a loop in a payable function.
+    recommendation: Carefully check that the function called by delegatecall is not payable/doesn't use msg.value.

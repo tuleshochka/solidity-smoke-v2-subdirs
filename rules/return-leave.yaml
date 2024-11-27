@@ -1,0 +1,42 @@
+rules:
+  - id: return-leave
+    pattern-either:
+      - pattern-not-inside: |
+          function $FUNC(...) ... public ... {
+            ...
+          }
+      - pattern-not-inside: |
+          function $FUNC(...) ... external ... {
+            ...
+          }
+      - pattern: |
+          assembly {
+            ...
+            return ($VAR, $INT)
+            ...
+          }
+      - pattern: |
+          assembly {
+            ...
+            return ($INT, $INT)
+            ...
+          }
+      - pattern: |
+          assembly {
+            ...
+            return ($INT, $VAR)
+            ...
+          }
+      - pattern: |
+          assembly {
+            ...
+            return ($VAR, $VAR)
+            ...
+          }   
+    metavariable-regex:
+      $VAR: (?P<variable>\w+)
+      $INT: (?P<int>\d+)
+    language: solidity
+    level: High
+    description: Detect if a return is used where a leave should be used.
+    recommendation: Use the leave statement.

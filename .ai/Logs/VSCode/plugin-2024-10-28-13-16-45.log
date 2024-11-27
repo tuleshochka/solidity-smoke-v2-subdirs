@@ -1,0 +1,23 @@
+[10/28/2024, 1:16:45 PM] info: Logging was started to file.
+[10/28/2024, 1:16:45 PM] info: Start application inspector initialization
+[10/28/2024, 1:16:45 PM] info: Hide developer mode UI
+[10/28/2024, 1:16:45 PM] info: Infrastructure Configurations: {"port":8000,"infrastructureAssemblyFolderPath":"C:\\Users\\sizyn\\AppData\\Local\\Application Inspector Analyzer","applicationResourcesFolderPath":"C:\\Users\\sizyn\\AppData\\Local\\Application Inspector Analyzer","scanTargetFolderPath":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2","isDebugging":false,"logLevel":{"q8_1":"Error","r8_1":5,"type":5,"key":"Settings.LogLevel.Error.Text"},"logDir":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2\\.ai\\Logs\\Infrastructure\\2024-10-28-13-16-45","tipsFoundNotificationThreshold":1000,"similarIssuesFoundNotificationThreshold":1000,"applicationLocalDataFolderPath":"c:\\Positive Technologies\\AI\\apps\\Solidity\\solidity-smoke-v2\\.ai"}
+[10/28/2024, 1:16:45 PM] info: Start infrastructure initialization
+[10/28/2024, 1:16:46 PM] info: Infrastructure was started
+[10/28/2024, 1:16:47 PM] info: Initialize aie integration isn't initialized
+[10/28/2024, 1:16:47 PM] info: Infrastructure was initialized
+[10/28/2024, 1:16:47 PM] info: Infrastructure Installer was deleted
+[10/28/2024, 1:16:47 PM] info: Clean up logs files was started
+[10/28/2024, 1:16:47 PM] info: Clean up logs files was finished
+[10/28/2024, 1:17:56 PM] info: Start scan command handled
+[10/28/2024, 1:19:59 PM] info: Scan done message handled
+[10/28/2024, 1:44:02 PM] info: Handled new configurationAieIntegrationServerUrl: https://msorokovayacent85.aie.ptsecurity.ru/
+[10/28/2024, 1:44:03 PM] info: Local project wasn't mapped to aie -  initializeIssuesSynchronization is interrupted
+[10/28/2024, 1:46:17 PM] info: Start scan command handled
+[10/28/2024, 1:47:26 PM] info: Scan done message handled
+[10/28/2024, 1:57:12 PM] info: Project file creation started
+[10/28/2024, 1:57:12 PM] info: Project file creation finished
+[10/28/2024, 1:58:10 PM] info: Start scan command handled
+[10/28/2024, 2:00:00 PM] info: Scan done message handled
+[10/28/2024, 4:11:36 PM] info: Start scan command handled
+[10/28/2024, 4:11:51 PM] info: Scan done message handled

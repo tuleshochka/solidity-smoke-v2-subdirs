@@ -1,0 +1,23 @@
+rules:
+  - id: controlled-array-length
+    patterns:
+      - pattern-inside: |
+          contract ... {
+            ...
+            $TYPE[] $VAR;
+            ...
+            function $NAME(... $SOMETYPE $SOMEVAR ...) ... public ... {
+            ...
+            }
+          }
+      - pattern: $VAR.length = $SOMEVAR;
+    metavariable-regex:
+      $TYPE: (?P<word1>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*)\b)
+      $SOMETYPE: (?P<word5>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*)\b)
+      $VAR: (?P<word2>\w+)
+      $NAME: (?P<word3>\w+)
+      $SOMEVAR: (?P<word4>\w+)
+    language: solidity
+    level: High
+    description: Detects the direct assignment of an array's length.
+    recommendation: Do not allow array lengths to be set directly set; instead, opt to add values as needed. Otherwise, thoroughly review the contract to ensure a user-controlled variable cannot reach an array length assignment.

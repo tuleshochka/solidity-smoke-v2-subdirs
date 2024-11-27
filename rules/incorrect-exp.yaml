@@ -1,0 +1,19 @@
+rules:
+  - id: incorrect-exp
+    pattern-either:
+      - pattern: $VAR$WB^$WB$INT
+      - pattern: $VAR$WB^$WB$INT
+      - pattern: $INT$WB^$WB$NINT
+      - pattern-not: $VAR$WB^$WB$HEX
+      - pattern-not: $VAR$WB^$WB$HEX
+    metavariable-regex:
+      $VAR: (?P<variable>[_A-Za-z]\w*)
+      $NVAR: (?P<variable>[_A-Za-z]\w*)
+      $INT: (?P<int>\d+)
+      $NINT: (?P<nint>\d+)
+      $HEX: (?P<hex>0[xX][0-9a-fA-F]+)
+      $WB: (?P<wb>\s*?)
+    language: solidity
+    level: High
+    description: Detect use of bitwise xor ^ instead of exponential **
+    recommendation: Use the correct operator ** for exponentiation.

@@ -1,0 +1,26 @@
+rules:
+    - id: incorrect-return
+      patterns:
+          - pattern-inside: |
+              function $FUNC(...) ... {
+                ...
+                assembly {
+                  ...
+                  return (...)
+                }
+              }
+              ...
+          - pattern: |
+              function $FUNCSECOND(...) ... {
+                ...
+                $FUNC(...);
+                return ...;
+                ...
+              }               
+      metavariable-regex:
+        $FUNC: (?P<word1>\w+)
+        $FUNCSECOND: (?P<word2>\w+)
+      language: solidity
+      level: High
+      description: Detect if return in an assembly block halts unexpectedly the execution.
+      recommendation: Use the leave statement.

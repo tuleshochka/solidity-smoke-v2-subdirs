@@ -1,0 +1,15 @@
+rules:
+  - id: arbitrary-send-erc20
+    pattern-either:
+      - pattern: $FUNC.transferFrom(...);
+      - pattern: $FUNC.safeTransferFrom(...);
+      - pattern-not: $FUNC.transferFrom(..., msg.sender, ...);
+      - pattern-not: $FUNC.transferFrom(..., address(this), ...);
+      - pattern-not: $FUNC.safeTransferFrom(..., msg.sender, ...);
+      - pattern-not: $FUNC.safeTransferFrom(..., address(this), ...);
+    metavariable-regex:
+      $FUNC: (?P<word1>\w+)
+    language: solidity
+    level: High
+    description: Detect when msg.sender is not used as from in transferFrom.
+    recommendation: Use msg.sender as from in transferFrom.

@@ -1,0 +1,17 @@
+rules:
+    - id: solc-version
+      patterns:
+          - pattern-inside: |
+              pragma solidity ...;
+          - pattern: |
+              $OPERATOR $VERSION
+          - pattern-not: |
+              $OPERATOR 0.8.29
+      metavariable-regex:
+        $OPERATORHI: (?P<operatorhi>(\^|>|>=)+)
+        $OPERATOR: (?P<operator>(\^|>|>=|<|<=)*)
+        $VERSION: (?P<version>0\.[1-8].[\d]{1,2})
+      language: solidity
+      level: Potential
+      description: solc frequently releases new compiler versions. Using an old version prevents access to new Solidity security checks. We also recommend avoiding complex pragma statement.
+      recommendation: Deploy with a recent version of Solidity (at least 0.8.29) with no known severe issues. Use a simple pragma version that allows any of these versions. Consider using the latest version of Solidity for testing.

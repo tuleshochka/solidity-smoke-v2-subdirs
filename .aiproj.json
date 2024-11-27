@@ -1,0 +1,22 @@
+{
+    "ProjectName": "solidity-smoke-v2",
+    "ProgrammingLanguages": [
+        "Solidity"
+    ],
+    "ScanModules": [
+        "StaticCodeAnalysis",
+        "PatternMatching",
+        "Components",
+        "Configuration"
+    ],
+    "SkipGitIgnoreFiles": true,
+    "PmTaintSettings": {
+        "UsePublicAnalysisMethod": true
+    },
+    "PygrepSettings": {
+        "CustomParameters": "--log-level debug"
+    },
+    "BlackBoxSettings": {
+        "Site": "http://localhost"
+    }
+}

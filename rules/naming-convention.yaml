@@ -1,0 +1,64 @@
+rules:
+    - id: naming-convention
+      pattern-either:
+          - pattern-not: contract $CAP
+          - pattern: contract $SOME
+          - pattern-not: struct $CAP
+          - pattern: struct $SOME
+          - pattern-not: constructor
+          - pattern-not: event $CAP
+          - pattern: event $SOME
+          - pattern-not: enum $CAP
+          - pattern: enum $SOME
+          - pattern-not: modifier $MIXED
+          - pattern: modifier $SOME
+          - pattern: $TYPE $AVOID;
+          - pattern: $TYPE $AVOID = ...;
+          - pattern-not: $TYPE constant $UPPER;
+          - pattern-not: $TYPE constant $UPPER = ...;
+          - pattern-not: $TYPE constant $TRUEVARS;
+          - pattern-not: $TYPE constant $TRUEVARS = ...;
+          - pattern-not: $TYPE constant public ... = ...;
+          - pattern-not: $TYPE constant public ...;
+          - pattern: $TYPE constant $SOME = ...;
+          - pattern: $TYPE constant $SOME;
+          - pattern-not: $TYPE $VIS $UNDERSCORE;
+          - pattern-not: $TYPE $VIS $UNDERSCORE = ...;
+          - pattern-not: $TYPE $VIS $STATE;
+          - pattern-not: $TYPE $VIS $STATE = ...;
+          - pattern: $TYPE $VIS $SOME;
+          - pattern: $TYPE $VIS $SOME = ...;
+          - pattern-not: $TYPE $VIS immutable $IMMUTABLE;
+          - pattern-not: $TYPE $VIS immutable $IMMUTABLE = ...;
+          - pattern: $TYPE ... immutable $VAR;
+          - pattern: $TYPE ... immutable $VAR = ...;
+          - pattern-not: $TYPE $OTHER $MIXED;
+          - pattern-not: $TYPE $OTHER $MIXED = ...;
+          - pattern: $TYPE $OTHER $VAR;
+          - pattern: $TYPE $OTHER $VAR = ...;
+          - pattern-not: function $MIXED(...) ... {
+          - pattern-not: function $UNDERSCORE(...) ... $VIS ... {
+          - pattern-not: function $LEGALNAMEFUNC$FUNC(...) ...{
+          - pattern: function $FUNC(...) ... {
+      metavariable-regex:
+        $CAP: (?P<noc:word1>[A-Z]([A-Za-z0-9]+)?_?)
+        $IMMUTABLE: (?P<noc:word2>i_[a-z]([A-Za-z0-9]+)?_?)
+        $STATE: (?P<noc:word3>s_[a-z]([A-Za-z0-9]+)?_?)
+        $MIXED: (?P<noc:word4>[a-z]([A-Za-z0-9]+)?_?)
+        $UNDERSCORE: (?P<noc:word5>[_]?[a-z]([A-Za-z0-9]+)?_?)
+        $UPPER: (?P<noc:word6>[A-Z0-9_]+_?)
+        $AVOID: (?P<noc:word7>[lOI])
+        $TYPE: (?P<noc:word8>\b(?:uint\d*|int\d*|bool|string|address(?:\s+payable)?|bytes\d*(?:\s+memory))\b)
+        $VIS: (?P<noc:word9>private|internal)
+        $VAR: (?P<noc:word10>\w+)
+        $FUNC: (?P<noc:word11>\w+)
+        $SOME: (?P<noc:word12>\w+)
+        $TRUEVARS: (?P<noc:word13>symbol|name|decimals)
+        $LEGALNAMEFUNC: (?P<noc:word14>echidna_|crytic_)
+        $FUNCNAME: (?P<noc:word15>\w+)
+        $ARG: (?P<noc:word16>\w+)
+        $OTHER: (?P<noc:word17>public|external|\w+)
+      language: solidity
+      level: Potential
+      description: Solidity defines a naming convention that should be followed.
+      recommendation: Follow the Solidity naming convention.

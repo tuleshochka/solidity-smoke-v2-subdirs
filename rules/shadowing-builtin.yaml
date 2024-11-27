@@ -1,0 +1,31 @@
+rules:
+    - id: shadowing-builtin
+      pattern-either:
+          - pattern: |
+              function $BUILTIN(...)...{
+          - pattern: |
+              modifier $BUILTIN ... {
+          - pattern: |
+              event $BUILTIN(...);
+          - pattern: |
+              $TYPE ... $BUILTIN;
+          - pattern: |
+              $TYPE ... $BUILTIN = ...;
+          - pattern: |
+              function $KEYWORDS(...)...{
+          - pattern: |
+              modifier $KEYWORDS ... {
+          - pattern: |
+              event $KEYWORDS(...);
+          - pattern: |
+              $TYPE ... $KEYWORDS;
+          - pattern: |
+              $TYPE ... $KEYWORDS = ...;
+      metavariable-regex:
+        $TYPE: (?P<kt:type>bool|uint[\d]*|uint[\d]*|address|bytes1|bytes[\d]*)
+        $BUILTIN: (?P<builtin>assert|require|revert|block|blockhash|gasleft|msg|now|tx|this|addmod|mulmod|keccak256|sha256|sha3|ripemd160|ecrecover|selfdestruct|suicide|abi|fallback|receive)
+        $KEYWORDS: (?P<keywords>abstract|after|alias|apply|auto|case|catch|copyof|default|define|final|immutable|implements|in|inline|let|macro|match|mutable|null|of|override|partial|promise|reference|relocatable|sealed|sizeof|static|supports|switch|try|type|typedef|typeof|unchecked)
+      language: solidity
+      level: Low
+      description: Detection of shadowing built-in symbols using local variables, state variables, functions, modifiers, or events.
+      recommendation: Rename the local variables, state variables, functions, modifiers, and events that shadow a builtin symbol.
